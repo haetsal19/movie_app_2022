@@ -16,6 +16,7 @@ class Home extends React.Component {
             },
         } = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating');
         this.setState({ movies, isLoading: false });
+  
         //this.setState({ movies: movies }); 
         //객체의 키와 대입할 변수의 이름이 같다면 축약가능 in ES6
     }
@@ -47,6 +48,7 @@ class Home extends React.Component {
                           genres={movie.genres}
                           />
                     ))}
+                          console.log(movies);
                     </div>
             )}
             </section>
